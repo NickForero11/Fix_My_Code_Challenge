@@ -15,8 +15,8 @@ class Square:
 
     def __init__(self, width, height):
         """Initialize an empty or specific Square"""
-        self.width = 0
-        self.height = 0
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
