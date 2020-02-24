@@ -1,0 +1,9 @@
+<div id="page_wrapper">
+  <h1>Edit Post</h1>
+  <%= render 'form' %>
+  <%= form_for @post do |f| %>
+    <%= f.label 'Online' %><br>
+    <%= f.text_field :online %><br>
+    <%= f.submit "Edit Post" %>
+  <% end %>
+</div>
