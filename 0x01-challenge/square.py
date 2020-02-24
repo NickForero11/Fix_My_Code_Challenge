@@ -13,13 +13,33 @@ class Square:
 
     def __init__(self, *args, **kwargs):
         """Initialize an empty or specific Square"""
-        self.width = 0
-        self.height = 0
+        self.__width = 0
+        self.__height = 0
         if kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
         if args:
             (self.width, self.height) = args
+
+    @property
+    def width(self):
+        """Width getter"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Width setter"""
+        self.__width = value
+
+    @property
+    def height(self):
+        """Height getter"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Height setter"""
+        self.__height = value
 
     def area_of_my_square(self):
         """ Area of the square """
