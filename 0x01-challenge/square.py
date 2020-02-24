@@ -10,16 +10,13 @@ class Square:
     width(int): X size.
     height(int): Y size.
     """
+    width = 0
+    height = 0
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, width, height):
         """Initialize an empty or specific Square"""
-        self.__width = 0
-        self.__height = 0
-        if kwargs:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
-        if args:
-            (self.width, self.height) = args
+        self.width = 0
+        self.height = 0
 
     @property
     def width(self):
